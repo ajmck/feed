@@ -1,0 +1,3 @@
+[submodule "feed-django"]
+	path = feed-django
+	url = https://github.com/ajmck/feed-django
