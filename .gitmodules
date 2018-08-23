@@ -1,3 +1,6 @@
 [submodule "feed-django"]
 	path = feed-django
 	url = https://github.com/ajmck/feed-django
+[submodule "feed-react"]
+	path = feed-react
+	url = https://github.com/ajmck/feed-react.git
