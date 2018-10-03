@@ -13,9 +13,13 @@ services:
                         - "8080:8080"
                 depends_on:
                         - db
+                        - wdb
                 volumes:
                         - static:/opt/feed/static
                 env_file: .env
+                environment:
+                        - WDB_SOCKET_SERVER=wdb
+                        - WDB_NO_BROWSER_AUTO_OPEN=1
 
         db:
                 image: mdillon/postgis
@@ -25,3 +29,9 @@ services:
                 volumes:
                         - pg_data:/var/lib/postgresql
                 env_file: .env
+
+        wdb:
+                image: kozea/wdb
+                container_name: feed-wdb-debugger
+                ports:
+                    - 1984:1984

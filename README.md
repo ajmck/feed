@@ -65,3 +65,7 @@ If you need to exec in to the container, to run a command such as
 * (WSL) Install libgdal-dev
 * Connect PyCharm using virtualenv python as remote interpreter
 * Set dockerfile as PyCharm's build configuration
+
+# WDB debugger
+
+To run docker-compose in a way that loads the WDB web debugger, changes will be required to the codebase first, but in principle it's a matter of running the command `docker-compose -f docker-compose.wdb.yml up`
